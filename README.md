@@ -6,7 +6,10 @@ Simple, lightweight Pomodoro timer to boost focus and manage work/break cycles.
 - Focus and break timers (defaults: 25 / 5 / 15 minutes)
 - Start / pause / reset, desktop notifications, sound alerts
 - Customizable durations and keyboard shortcuts
-
+---
+# 🌐 Live Demo:
+[Click here to view the demo](https://pomodoro-timer-chi-black.vercel.app/)
+---
 ## Quick start
 1. Clone: `git clone https://github.com/CodeByTinku/Pomodoro-Timer.git`
 2. Go to the html file then run the file.
