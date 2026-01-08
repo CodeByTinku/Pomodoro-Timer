@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="timer-wrapper">
+            <h1 class="title">Pomodoro Timer</h1>
+            
+            <div class="mode-selector">
+                <button class="mode-btn active" data-mode="work">Work</button>
+                <button class="mode-btn" data-mode="shortBreak">Short Break</button>
+                <button class="mode-btn" data-mode="longBreak">Long Break</button>
+            </div>
+
+            <div class="timer-display">
+                <div class="circle-progress">
+                    <svg class="progress-ring" width="300" height="300">
+                        <circle class="progress-ring-circle" cx="150" cy="150" r="140"></circle>
+                    </svg>
+                    <div class="time-text">
+                        <span id="minutes">25</span>:<span id="seconds">00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="startBtn" class="btn btn-primary">Start</button>
+                <button id="pauseBtn" class="btn btn-secondary" disabled>Pause</button>
+                <button id="resetBtn" class="btn btn-secondary">Reset</button>
+            </div>
+
+            <div class="settings-panel">
+                <h3>Customize Intervals</h3>
+                <div class="settings-grid">
+                    <div class="setting-item">
+                        <label for="workDuration">Work Duration (minutes)</label>
+                        <input type="number" id="workDuration" min="1" max="60" value="25">
+                    </div>
+                    <div class="setting-item">
+                        <label for="shortBreakDuration">Short Break (minutes)</label>
+                        <input type="number" id="shortBreakDuration" min="1" max="30" value="5">
+                    </div>
+                    <div class="setting-item">
+                        <label for="longBreakDuration">Long Break (minutes)</label>
+                        <input type="number" id="longBreakDuration" min="1" max="60" value="15">
+                    </div>
+                    <div class="setting-item">
+                        <label for="sessionsBeforeLongBreak">Sessions Before Long Break</label>
+                        <input type="number" id="sessionsBeforeLongBreak" min="1" max="10" value="4">
+                    </div>
+                </div>
+                <button id="saveSettingsBtn" class="btn btn-save">Save Settings</button>
+            </div>
+
+            <div class="session-info">
+                <p>Session: <span id="sessionCount">0</span> / <span id="totalSessions">4</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
